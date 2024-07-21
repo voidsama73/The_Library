@@ -7,7 +7,15 @@ const hamburgerClose = document.getElementById("hamburger-close")
 const hamburgermenu = document.getElementById("hamburger")
 
 
-let myLibrary = [];
+let myLibrary = [
+    {
+        title: "One Piece",
+        author: "Eichiro Oda",
+        pages: 2000,
+        read: false,
+
+    },
+];
 
 let currentIndex = myLibrary.length;
 showAllBooks(myLibrary);
