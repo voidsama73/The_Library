@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Library</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Aclonica&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <div class="head">
+        <button id="hamburger">
+          <img src="menu-alt-2-svgrepo-com.svg" alt="" />
+        </button>
+        <h1>The Library</h1>
+        <button class="add">
+          <img src="add-plus-circle-svgrepo-com.svg" alt="" />
+        </button>
+      </div>
+      <nav>
+        <ul id="navigation">
+          <li onclick="showAllBooks(myLibrary)">All</li>
+          <li onclick="showOngoingBooks()">Ongoing</li>
+          <li onclick="showCompletedBooks()">Completed</li>
+          <li class="add">Add New</li>
+        </ul>
+        <ul id="navigation-mobile">
+          <li id="hamburger-close">
+            <img src="close-sm-svgrepo-com.svg" alt="" />
+          </li>
+          <li onclick="showAllBooks(myLibrary)">All</li>
+          <li onclick="showOngoingBooks()">Ongoing</li>
+          <li onclick="showCompletedBooks()">Completed</li>
+          <li class="add">Add New</li>
+        </ul>
+      </nav>
+    </header>
+    <section>
+      <div class="bookself">
+        <ul id="books"></ul>
+      </div>
+    </section>
+    <dialog id="modal">
+      <form id="form">
+        <label for="title">Title</label>
+        <input type="text" name="" id="title" required />
+        <label for="author">Author</label>
+        <input type="text" id="author" required />
+        <label for="pages">Pages</label>
+        <input type="number" id="pages" required />
+        <label for="checkbox"> have you read this before</label>
+        <input type="checkbox" id="checkbox" />
+        <input type="submit" value="ADD" />
+      </form>
+      <button id="hide">Close</button>
+    </dialog>
+  </body>
+</html>
