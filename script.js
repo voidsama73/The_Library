@@ -160,25 +160,7 @@ function showOngoingBooks() {
     showAllBooks(ongoingBooks)
 }
 
-
-//delete function here
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//evnent for the mobile menu toggle
 hamburgerClose.addEventListener("click", close)
 function close() {
 
@@ -191,4 +173,16 @@ hamburgermenu.addEventListener("click", () => {
 
 })
 
+
+
+//event for the track of current tab
+const active = document.querySelectorAll(".focus")
+active.forEach((element) => {
+    element.addEventListener("click", function () {
+        active.forEach((e) => {
+            e.classList.remove("active")
+        })
+        this.classList.add("active");
+    })
+})
 
